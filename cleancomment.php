@@ -4,7 +4,7 @@ Plugin Name: CleanComments Commenting System
 Plugin URI: http://www.cleancomments.com/
 Description: The CleanComments comment system replaces your WordPress comment system with your comments hosted and powered by CleanComments. Use the CleanComments admin page to set it up.
 Author: CleanComments <info@cleancomments.com>
-Version: 1.0
+Version: 1.0.1
 Author URI: http://cleancomments.com
 */
 function cleancomment_template_load( $comment_template ) {
@@ -150,7 +150,7 @@ function check_site_key($site_key)
 {
      $response = GetPage("http://cleancomments.com/api/count?site_key=$site_key");
      $response_decoded = json_decode($response, true);
-     if($response_decoded['counts'])
+     if(is_array($response_decoded['counts']))
      {
           return true; //Valid site key
      }
