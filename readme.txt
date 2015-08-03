@@ -31,7 +31,11 @@ No FAQ so far.
 
 == Changelog ==
 
-This is the first version of this plugin.
+1.0 -> 1.0.1
+
+Fixed KEY validation bug;
+
+
 == Upgrade Notice ==
 
 None
